@@ -1,5 +1,5 @@
 #include <iostream>
-#include <vector>
+
 
 
 using namespace std;
@@ -17,11 +17,20 @@ int main()
 	
 	for(int i = 0; i < value; i++)
 	{
-		getline(cin, value2);		
+		getline(cin, value2); // le entradas com espaços	
 		cout << value2 << endl;	
 	}
+	
+	// ler varias variaveis
+	int a, b, c;
+	cin >> a >> b >> c;
+	cout << a << b << c << endl;
 
-	cout << value3;
+	// ler quantidade limitada	
+	cin.ignore();
+	char entradas[9];
+	cin.getline(entradas, 3); // lerá e armazenará 2 strings,apenas
+	cout << entradas;
 
 	return 0;
 }
